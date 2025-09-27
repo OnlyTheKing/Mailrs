@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transmatic | Kaspersky Next EDR Mailer</title>
+    <style>
+      /* Responsive */
+      @media only screen and (max-width: 600px) {
+        .container {
+          width: 95% !important;
+        }
+        .stack-column,
+        .stack-column td {
+          display: block !important;
+          width: 100% !important;
+        }
+        img {
+          max-width: 100% !important;
+          height: auto !important;
+        }
+        .header,
+        .footer {
+          padding: 20px !important;
+        }
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #e8f0f7;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .container {
+        max-width: 640px;
+        margin: 30px auto;
+        background: #ffffff;
+        border-radius: 14px;
+        box-shadow: 0 10px 28px rgba(36, 93, 163, 0.12);
+        overflow: hidden;
+      }
+
+      /* --- HEADER --- */
+      .header {
+        background: linear-gradient(135deg, #d0e7f9, #b3d6f5);
+        text-align: center;
+        padding: 50px 30px;
+        border-bottom: 3px solid #4791db;
+      }
+
+      .header img {
+        max-width: 140px;
+        height: auto;
+        margin-bottom: 18px;
+      }
+
+      .header h1 {
+        font-size: 30px;
+        font-weight: 800;
+        color: #244b80;
+        margin: 12px 0 8px;
+      }
+
+      .header p.subtitle {
+        font-size: 17px;
+        color: #466a94;
+        margin: 0;
+        font-weight: 500;
+      }
+
+      /* --- CONTENT --- */
+      .content {
+        padding: 35px 30px 45px;
+        color: #344a6e;
+        border-bottom: 1px solid #dfe8f2;
+      }
+
+      .content h2 {
+        font-size: 23px;
+        font-weight: 700;
+        margin-bottom: 18px;
+        color: #1a355e;
+      }
+
+      .content p {
+        font-size: 15px;
+        line-height: 1.7;
+        margin-bottom: 28px;
+        color: #3b5579;
+      }
+
+      /* --- FEATURES --- */
+      .features {
+        display: flex;
+        gap: 22px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .feature-box {
+        background: #f4f9ff;
+        box-shadow: 0 3px 12px rgba(36, 93, 163, 0.1);
+        border-radius: 12px;
+        padding: 22px;
+        flex: 1 1 48%;
+        min-width: 280px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .feature-box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 18px rgba(36, 93, 163, 0.2);
+      }
+
+      .feature-box h3 {
+        font-weight: 700;
+        font-size: 18px;
+        color: #244b80;
+        margin-bottom: 14px;
+      }
+
+      .feature-box ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
+
+      .feature-box ul li {
+        margin-bottom: 10px;
+        padding-left: 25px;
+        position: relative;
+        font-size: 14px;
+        color: #425f8c;
+      }
+
+      .feature-box ul li::before {
+        content: "✔";
+        position: absolute;
+        left: 0;
+        color: #4791db;
+        font-weight: bold;
+      }
+
+      /* --- CTA --- */
+      .cta-section {
+        background: linear-gradient(135deg, #4791db, #296bb5);
+        text-align: center;
+        padding: 45px 30px;
+        border-radius: 0 0 14px 14px;
+      }
+
+      .cta-section h2 {
+        color: #ffffff;
+        font-size: 26px;
+        margin: 0 0 22px;
+        font-weight: 800;
+      }
+
+      .btn-primary {
+        background-color: #ffffff;
+        color: #2460b7;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 16px;
+        padding: 15px 45px;
+        border-radius: 40px;
+        display: inline-block;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        background-color: #eaf3ff;
+        color: #173e70;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+      }
+
+      .footnote {
+        margin-top: 18px;
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 13px;
+        font-style: italic;
+      }
+
+      /* --- FOOTER --- */
+      .footer {
+        padding: 28px 30px;
+        text-align: left;
+        font-size: 13px;
+        color: #5a7191;
+        background-color: #f7faff;
+        border-top: 3px solid #4791db;
+      }
+
+      .footer strong {
+        color: #2c487c;
+      }
+
+      .footer a {
+        color: #2460b7;
+        text-decoration: none;
+      }
+
+      .footer ul {
+        margin: 12px 0 0 20px;
+        padding: 0;
+      }
+
+      .footer ul li {
+        margin-bottom: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="container"
+      role="main"
+      aria-label="Kaspersky Next EDR promotion from Transmatic Infotech"
+    >
+      <header class="header">
+        <img
+          src="images/Transmatic-Transperent-logo.webp"
+          alt="Transmatic Infotech logo"
+        />
+        <h1>Kaspersky Next EDR</h1>
+        <p class="subtitle">
+          Advanced Endpoint Detection & Response for Modern Enterprises
+        </p>
+      </header>
+
+      <section class="content">
+        <h2>Comprehensive Threat Defense Tailored for You</h2>
+        <p>
+          Discover how Kaspersky Next EDR provides proactive endpoint security
+          with advanced detection, automated response, and full incident
+          visibility — delivered by
+          <strong>Transmatic Infotech</strong>.
+        </p>
+
+        <div class="features" aria-label="Key features and benefits">
+          <article class="feature-box" tabindex="0">
+            <h3>Kaspersky Next EDR Core</h3>
+            <ul>
+              <li>Threat detection across endpoints and servers</li>
+              <li>Smart automated response and remediation</li>
+              <li>Centralized management console</li>
+            </ul>
+          </article>
+
+          <article class="feature-box" tabindex="0">
+            <h3>Kaspersky Next EDR Optimum</h3>
+            <ul>
+              <li>Extended threat intelligence and analytics</li>
+              <li>Integration with SIEM and security orchestration</li>
+              <li>Scalable across hybrid environments</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="cta-section" aria-label="Call to action">
+        <h2>Protect Your Business Today</h2>
+        <a
+          class="btn-primary"
+          href="https://www.transmatic.in/contact"
+          target="_blank"
+          rel="noopener noreferrer"
+          >🚀 Request a Free Consultation</a
+        >
+        <p class="footnote">Your privacy and data security is our priority.</p>
+      </section>
+
+      <footer class="footer" role="contentinfo">
+        <p>
+          <strong>About Transmatic Infotech:</strong> Since 2014, we have
+          empowered businesses in Manufacturing, Finance, Education, and
+          Healthcare to implement secure IT solutions. As an official
+          <strong>Kaspersky Partner</strong>, we ensure expert deployment and
+          ongoing support across Maharashtra.
+        </p>
+
+        <address>
+          <strong>Contact Us:</strong><br />
+          📞 +91 9673996854<br />
+          🌐
+          <a
+            href="https://www.transmatic.in"
+            target="_blank"
+            rel="noopener noreferrer"
+            >www.transmatic.in</a
+          >
+        </address>
+
+        <ul>
+          <li>
+            <strong>Pune:</strong> Flat No. 3, B-Wing, Karan Pushpa Appt, Warje,
+            Pune - 411058
+          </li>
+          <li>
+            <strong>Nashik:</strong> Flat No-7, A Wing, Ufada Classic, Panchak,
+            Nashik - 422101
+          </li>
+          <li>
+            <strong>Ch. Sambhajinagar:</strong> A-105, Nabhrja-Nikunji, Shendra,
+            Ch. Sambhajinagar - 431001
+          </li>
+        </ul>
+      </footer>
+    </div>
+  </body>
+</html>
